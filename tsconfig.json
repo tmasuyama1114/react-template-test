@@ -1,26 +1,25 @@
 {
   "compilerOptions": {
-    // ECMAScript のターゲットバージョン
     "target": "ES2022",
-
-    // 使用するライブラリ定義
+    "useDefineForClassFields": true,
     "lib": ["ES2023", "DOM", "DOM.Iterable"],
-
-    // モジュールの設定
     "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "isolatedModules": true,
+    "skipLibCheck": true,
 
-    // JSX の設定
+    /* Bundler mode */
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
     "jsx": "react-jsx",
 
-    // 型チェックの設定
+    /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["vite.config.ts", "src"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["vite.config.ts", "src"]
 }
